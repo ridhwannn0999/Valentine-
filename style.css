@@ -1,1 +1,80 @@
 <html><head></head><body style="overflow-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;"><div>body {</div><div>&nbsp; &nbsp; font-family: 'Comic Sans MS', cursive, sans-serif;</div><div>&nbsp; &nbsp; background: linear-gradient(to right, #ff9a9e, #fad0c4);</div><div>&nbsp; &nbsp; color: #fff;</div><div>&nbsp; &nbsp; text-align: center;</div><div>&nbsp; &nbsp; padding: 20px;</div><div>}</div><div><br></div><div>.container {</div><div>&nbsp; &nbsp; max-width: 800px;</div><div>&nbsp; &nbsp; margin: auto;</div><div>}</div><div><br></div><div>h1 {</div><div>&nbsp; &nbsp; font-size: 3em;</div><div>&nbsp; &nbsp; margin-bottom: 10px;</div><div>}</div><div><br></div><div>h2 {</div><div>&nbsp; &nbsp; margin-top: 30px;</div><div>&nbsp; &nbsp; font-size: 2em;</div><div>&nbsp; &nbsp; color: #ffe0e0;</div><div>}</div><div><br></div><div>p {</div><div>&nbsp; &nbsp; font-size: 1.2em;</div><div>&nbsp; &nbsp; line-height: 1.5em;</div><div>&nbsp; &nbsp; margin: 10px 0;</div><div>}</div><div><br></div><div>button {</div><div>&nbsp; &nbsp; font-size: 1.5em;</div><div>&nbsp; &nbsp; padding: 10px 20px;</div><div>&nbsp; &nbsp; margin-top: 15px;</div><div>&nbsp; &nbsp; border: none;</div><div>&nbsp; &nbsp; border-radius: 10px;</div><div>&nbsp; &nbsp; cursor: pointer;</div><div>&nbsp; &nbsp; background-color: #ff6f91;</div><div>&nbsp; &nbsp; color: #fff;</div><div>&nbsp; &nbsp; transition: transform 0.2s;</div><div>}</div><div><br></div><div>button:hover {</div><div>&nbsp; &nbsp; transform: scale(1.1);</div><div>}</div><div><br></div><div>.template {</div><div>&nbsp; &nbsp; background-color: rgba(255, 255, 255, 0.1);</div><div>&nbsp; &nbsp; margin: 20px 0;</div><div>&nbsp; &nbsp; padding: 20px;</div><div>&nbsp; &nbsp; border-radius: 15px;</div><div>}</div><div><br></div></body></html>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #ff5f9e, #ffb3d9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  max-width: 90%;
+  color: #fff;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  animation: pop 2s infinite alternate;
+}
+
+.title span {
+  color: #ffe6f0;
+  text-shadow: 0 0 10px #ffebf3;
+}
+
+.message {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+button {
+  background: #ff2f7f;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff005d;
+  transform: scale(1.05);
+}
+
+@keyframes pop {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+/* Floating hearts */
+.heart {
+  position: fixed;
+  bottom: -10px;
+  font-size: 20px;
+  animation: floatUp 5s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
